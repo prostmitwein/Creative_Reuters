@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <defs>
+    <style>
+      .text { font-family: 'Helvetica Neue', Helvetica, 'Arial Black', sans-serif; font-weight: 900; font-size: 110px; fill: #FFFFFF; letter-spacing: -2px; }
+      .dot { fill: #FF8000; }
+    </style>
+  </defs>
+  <!-- Outer Ring Dots -->
+  <circle class="dot" cx="100" cy="30" r="14" />
+  <circle class="dot" cx="145" cy="45" r="12" />
+  <circle class="dot" cx="170" cy="85" r="10" />
+  <circle class="dot" cx="160" cy="130" r="12" />
+  <circle class="dot" cx="125" cy="165" r="14" />
+  <circle class="dot" cx="80" cy="175" r="16" />
+  <circle class="dot" cx="40" cy="150" r="12" />
+  <circle class="dot" cx="25" cy="100" r="10" />
+  <circle class="dot" cx="45" cy="55" r="12" />
+  
+  <!-- Inner Ring Dots -->
+  <circle class="dot" cx="100" cy="65" r="8" />
+  <circle class="dot" cx="125" cy="85" r="7" />
+  <circle class="dot" cx="120" cy="115" r="8" />
+  <circle class="dot" cx="95" cy="135" r="9" />
+  <circle class="dot" cx="70" cy="120" r="7" />
+  <circle class="dot" cx="70" cy="88" r="7" />
+
+  <text x="210" y="140" class="text">Reuters</text>
+</svg>

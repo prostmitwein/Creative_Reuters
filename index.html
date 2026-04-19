@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reuters Creative Lab | The Sorting of Lies</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="layout-wrapper">
+
+    <!-- Static Left Column: Branding -->
+    <aside class="branding-column">
+      <div class="logo-container">
+        <img src="./reuters-logo.svg" alt="Reuters Logo" class="reuters-logo">
+      </div>
+
+      <div class="scroll-progress-line">
+        <div class="progress-fill" id="progress-indicator"></div>
+      </div>
+    </aside>
+
+    <!-- Scrollable Right Column: Narrative -->
+    <main class="narrative-column" id="narrative-scroll">
+
+      <section class="story-slide snap-panel">
+        <div class="slide-content reveal-on-scroll">
+          <h4 class="kicker">A VISUAL EXPOSE</h4>
+          <h1 class="headline">The Sorting<br>of Lies</h1>
+          <p class="dek">The Creative Submission by Naman Bhotika, reporting from Reuters, stationed in UNHRC.</p>
+          <div class="scroll-hint">
+            <span class="line"></span>
+            <span class="text">SCROLL TO EXPOSE</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Poem Stanzas -->
+      <section class="story-slide snap-panel">
+        <div class="slide-content reveal-on-scroll">
+          <h4 class="slide-label">POEM: STANZA 1</h4>
+          <p class="poem-body">
+            Oh, you may think I am just a reporter, a simple mic, misunderstood,<br>
+            But I am the Hat of the Reuters' eye, I see the truth beneath the lie.<br>
+            I do not sort for brave or bold, nor for the stories that were told,<br>
+            I sort the delegates of the room, into the houses of their doom.
+          </p>
+        </div>
+      </section>
+
+      <section class="story-slide snap-panel">
+        <div class="slide-content reveal-on-scroll">
+          <h4 class="slide-label">POEM: STANZA 2</h4>
+          <p class="poem-body">
+            To the council go the Great, who block the aid and seal the fate,<br>
+            They play a "Game of Thrones" with care, while hospitals dissolve in air.<br>
+            To House Abstain the cautious flee, where "Yes, Minister" is the decree,<br>
+            They offer graffiti with punctuation, but lack the will for actual salvation.
+          </p>
+        </div>
+      </section>
+
+      <section class="story-slide snap-panel">
+        <div class="slide-content reveal-on-scroll">
+          <h4 class="slide-label">POEM: STANZA 3</h4>
+          <p class="poem-body">
+            You preach of Availability and Quality in your floor speech,<br>
+            While Acceptability remains a dream that you cannot quite reach.<br>
+            Like Cornelius Fudge in his pinstriped cloak, you tr—eat the crisis as a joke,<br>
+            Denying the "Return of the Dark" until the world is stripped and stark.
+          </p>
+        </div>
+      </section>
+
+      <section class="story-slide snap-panel">
+        <div class="slide-content reveal-on-scroll">
+          <h4 class="slide-label">POEM: STANZA 4</h4>
+          <p class="poem-body">
+            The Accountability you seek is but another burden on the weak,<br>
+            A bureaucratic "Catch-22" where rules exist to stifle you.<br>
+            Yet now a magical shift we see, a sudden, strange unanimity,<br>
+            Where rivals trade their "Cruciatus" for a paper peace that won't await us.
+          </p>
+        </div>
+      </section>
+
+      <section class="story-slide snap-panel">
+        <div class="slide-content reveal-on-scroll">
+          <h4 class="slide-label">POEM: STANZA 5</h4>
+          <p class="poem-body">
+            You came to negotiate health and peace; peace refused to be negotiated,<br>
+            While the "Nuremberg Ghost" watches on, feeling thoroughly un-appreciated.<br>
+            The sorting is done, the bloc is signed, leaving the actual truth behind,<br>
+            Go now to lunch and enjoy your steak, while the global health architecture continues to break.
+          </p>
+        </div>
+      </section>
+
+      <!-- NEW MODULE 1: Data Counter -->
+      <section class="story-slide snap-panel">
+        <div class="slide-content reveal-on-scroll">
+          <h4 class="slide-label">GLOBAL DATABANK</h4>
+          <h3 class="headline" style="font-size: 2.5rem; margin-bottom: 2rem;">The Human Cost of Aid.</h3>
+          <p class="news-excerpt">Global conflicts from Sudan to Gaza run synchronously. Healthcare workers are fundamentally protected under international law, yet data indicates unprecedented systemic failure.</p>
+          <div class="interactive-svg-box" style="display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
+            <button id="fetch-data-btn" style="padding: 15px 30px; font-family: var(--font-sans); letter-spacing: 2px; font-size: 1rem; background: var(--reuters-brand); color: white; border: none; border-radius: 4px; cursor: pointer; text-transform: uppercase;">QUERY LIVE OBSERVATORY</button>
+            <div id="data-result-box" style="margin-top: 2rem; display:none;">
+              <p id="data-status" style="color: var(--reuters-secondary); font-family: monospace;"></p>
+              <h1 id="live-counter-val" style="font-size: 5.5rem; font-family: var(--font-serif); color: white; text-shadow: 0 0 20px var(--reuters-brand); line-height: 1;">0</h1>
+              <p class="kicker" style="margin-bottom:0;">Healthcare Workers Lost (2023-Present)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEW MODULE 2: The Red String -->
+      <section class="story-slide snap-panel">
+        <div class="slide-content reveal-on-scroll">
+          <h4 class="slide-label">THE RED STRING</h4>
+          <h3 class="headline" style="font-size: 2.5rem; margin-bottom: 1rem;">Bureaucratic Gridlock.</h3>
+          <p class="news-excerpt">Vetoes and procedural delays cascade downwards, physically halting NGO deployments.</p>
+          <div class="interactive-svg-box">
+            <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto;">
+              <!-- Red strings that animate in -->
+              <path d="M100,50 C 200,50 150,200 300,250" fill="none" stroke="var(--reuters-brand)" stroke-width="3" class="red-string-path"/>
+              <path d="M100,50 C 300,-50 400,100 500,150" fill="none" stroke="var(--reuters-brand)" stroke-width="3" class="red-string-path" style="transition-delay: 0.5s;"/>
+              <path d="M300,250 C 400,250 400,150 500,150" fill="none" stroke="#e53e3e" stroke-width="3" class="red-string-path" style="transition-delay: 1s;"/>
+              
+              <!-- Nodes -->
+              <circle cx="100" cy="50" r="15" fill="#111" stroke="white" stroke-width="2"/>
+              <text x="125" y="55" fill="white" font-family="monospace" font-size="14">UN Security Council</text>
+              
+              <circle cx="300" cy="250" r="15" fill="#111" stroke="white" stroke-width="2"/>
+              <text x="325" y="255" fill="white" font-family="monospace" font-size="14">Resolution Veto</text>
+              
+              <circle cx="500" cy="150" r="15" fill="#111" stroke="var(--reuters-brand)" stroke-width="2"/>
+              <text x="360" y="140" fill="var(--reuters-brand)" font-family="monospace" font-size="14">Aid Embargoed</text>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEW MODULE 3: World Map (Global Ping) -->
+      <section class="story-slide snap-panel">
+        <div class="slide-content reveal-on-scroll">
+          <h4 class="slide-label">GLOBAL ARCHITECTURE FAILURE</h4>
+          <h3 class="headline" style="font-size: 2.5rem; margin-bottom: 1rem;">Not an Isolated Incident.</h3>
+          <p class="news-excerpt">The erosion of medical neutrality spans across multiple concurrent international crises.</p>
+          <div class="interactive-svg-box" style="padding: 0; overflow: hidden; position: relative; min-height: 250px;">
+            <!-- Abstract Data Map Built Natively -->
+            <svg viewBox="0 0 120 60" style="width: 100%; height: auto; opacity: 0.4;" class="abstract-world">
+              <defs><style>.w-block { fill: rgba(255, 255, 255, 1); rx: 1px; ry: 1px; }</style></defs>
+              <rect class="w-block" x="15" y="10" width="25" height="3" />
+              <rect class="w-block" x="12" y="14" width="28" height="3" />
+              <rect class="w-block" x="18" y="18" width="16" height="3" />
+              <rect class="w-block" x="22" y="22" width="8" height="3" />
+              <rect class="w-block" x="24" y="26" width="4" height="3" />
+              <rect class="w-block" x="30" y="32" width="8" height="3" />
+              <rect class="w-block" x="32" y="36" width="10" height="3" />
+              <rect class="w-block" x="34" y="40" width="6" height="3" />
+              <rect class="w-block" x="36" y="44" width="4" height="5" />
+              <rect class="w-block" x="50" y="10" width="18" height="3" />
+              <rect class="w-block" x="48" y="14" width="22" height="3" />
+              <rect class="w-block" x="46" y="18" width="24" height="3" />
+              <rect class="w-block" x="46" y="22" width="20" height="3" />
+              <rect class="w-block" x="48" y="26" width="16" height="3" />
+              <rect class="w-block" x="50" y="30" width="12" height="3" />
+              <rect class="w-block" x="54" y="34" width="8" height="3" />
+              <rect class="w-block" x="56" y="38" width="4" height="3" />
+              <rect class="w-block" x="70" y="10" width="30" height="3" />
+              <rect class="w-block" x="72" y="14" width="32" height="3" />
+              <rect class="w-block" x="70" y="18" width="28" height="3" />
+              <rect class="w-block" x="74" y="22" width="20" height="3" />
+              <rect class="w-block" x="80" y="26" width="12" height="3" />
+              <rect class="w-block" x="86" y="30" width="8" height="3" />
+              <rect class="w-block" x="100" y="40" width="12" height="3" />
+              <rect class="w-block" x="98" y="44" width="14" height="3" />
+              <rect class="w-block" x="102" y="48" width="8" height="3" />
+              <rect class="w-block" x="106" y="18" width="3" height="3" />
+              <rect class="w-block" x="104" y="22" width="3" height="3" />
+            </svg>
+            
+            <!-- Radar Pings mapped to percentage locations -->
+            <!-- Ukraine -->
+            <div style="position: absolute; top: 28%; left: 56%;">
+              <div class="ping-circle" style="position:absolute; width:12px; height:12px; background:var(--reuters-brand); border-radius:50%; transform:translate(-50%,-50%);"></div>
+              <div class="ping-circle" style="position:absolute; width:12px; height:12px; border:2px solid var(--reuters-brand); border-radius:50%; transform:translate(-50%,-50%); animation: radarPing 2s infinite ease-out 0.2s;"></div>
+              <p style="position:absolute; top:-20px; left:15px; color:white; font-family:monospace; font-size:12px; text-shadow: 0 0 5px black;">Ukraine</p>
+            </div>
+            <!-- Gaza -->
+            <div style="position: absolute; top: 38%; left: 58%;">
+              <div class="ping-circle" style="position:absolute; width:12px; height:12px; background:#e53e3e; border-radius:50%; transform:translate(-50%,-50%);"></div>
+              <div class="ping-circle" style="position:absolute; width:12px; height:12px; border:2px solid #e53e3e; border-radius:50%; transform:translate(-50%,-50%); animation: radarPing 2s infinite ease-out 1s;"></div>
+              <p style="position:absolute; top:-10px; left:15px; color:white; font-family:monospace; font-size:12px; text-shadow: 0 0 5px black;">Gaza</p>
+            </div>
+            <!-- Sudan -->
+            <div style="position: absolute; top: 48%; left: 56%;">
+              <div class="ping-circle" style="position:absolute; width:12px; height:12px; background:#e53e3e; border-radius:50%; transform:translate(-50%,-50%);"></div>
+              <div class="ping-circle" style="position:absolute; width:12px; height:12px; border:2px solid #e53e3e; border-radius:50%; transform:translate(-50%,-50%); animation: radarPing 2s infinite ease-out 0.6s;"></div>
+              <p style="position:absolute; top:5px; left:15px; color:white; font-family:monospace; font-size:12px; text-shadow: 0 0 5px black;">Sudan</p>
+            </div>
+            <!-- Myanmar -->
+            <div style="position: absolute; top: 46%; left: 75%;">
+              <div class="ping-circle" style="position:absolute; width:12px; height:12px; background:#e53e3e; border-radius:50%; transform:translate(-50%,-50%);"></div>
+              <div class="ping-circle" style="position:absolute; width:12px; height:12px; border:2px solid #e53e3e; border-radius:50%; transform:translate(-50%,-50%); animation: radarPing 2s infinite ease-out 1.5s;"></div>
+              <p style="position:absolute; top:-20px; left:-55px; color:white; font-family:monospace; font-size:12px; text-shadow: 0 0 5px black;">Myanmar</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEW MODULE 4: Before & After Slider -->
+      <section class="story-slide snap-panel">
+        <div class="slide-content reveal-on-scroll">
+          <h4 class="slide-label">STRUCTURAL ERASURE</h4>
+          <h3 class="headline" style="font-size: 2.5rem; margin-bottom: 1rem;">The Collapse of Sanctuaries.</h3>
+          <p class="news-excerpt">Drag the slider horizontally to reveal the devastation of global medical infrastructure.</p>
+          <div class="compare-container" id="compare-widget">
+            <!-- Background Image (After - Destroyed) -->
+            <img src="./after_hospital_1776541213020.png" class="compare-img" alt="After Destruction">
+
+            <!-- Foreground Image Overlay (Before - Functional) -->
+            <div class="compare-overlay" id="compare-overlay">
+              <img src="./before_hospital_1776541196518.png" alt="Before Destruction" id="compare-img-before">
+            </div>
+
+            <!-- Slider Handle -->
+            <div class="compare-handle" id="compare-handle"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- News Section -->
+      <!-- News Poster 1 -->
+      <section class="story-slide snap-panel">
+        <div class="slide-content reveal-on-scroll">
+          <h4 class="slide-label">BREAKING NEWS!</h4>
+          <article class="news-entry has-poster">
+            <div class="news-poster">
+              <iframe src="https://www.instagram.com/p/DXRBGZrj1zV/embed" width="100%" height="480" frameborder="0"
+                scrolling="no" allowtransparency="true"></iframe>
+            </div>
+            <div class="news-meta">
+              <span class="news-time">UNHRC // REUTERS</span>
+              <h3 class="news-headline" style="font-size: 1.6rem; line-height: 1.4; margin-bottom: 2rem;">UNHRC SPENDS
+                15 MINUTES CONTESTING THE DEATH TOLL IN THE ISRAEL-PALESTINE CONFLICT.</h3>
+              <p class="news-excerpt">THE COUNCIL RENAMED TO COUNCIL OF INADEQUACY?</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- News Poster 2 -->
+      <section class="story-slide snap-panel">
+        <div class="slide-content reveal-on-scroll">
+          <h4 class="slide-label">LATEST DEVELOPMENTS</h4>
+          <article class="news-entry has-poster">
+            <div class="news-poster">
+              <iframe src="https://www.instagram.com/p/DXRBGZrj1zV/embed" width="100%" height="480" frameborder="0"
+                scrolling="no" allowtransparency="true"></iframe>
+            </div>
+            <div class="news-meta">
+              <span class="news-time">UNHRC // NAMAN BHOTIKA</span>
+              <h3 class="news-headline" style="font-size: 1.6rem; line-height: 1.4; margin-bottom: 2rem;">UNHRC AGAIN
+                ADJOURNS HUMAN RIGHTS DISCUSSION DUE TO INCONSEQUENTIAL INTERNAL DEBATE.</h3>
+              <p class="news-excerpt">@reuters_munblr</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Meme Section -->
+      <section class="story-slide snap-panel">
+        <div class="slide-content reveal-on-scroll">
+          <h4 class="slide-label">MEME CORNER</h4>
+          <div class="cinematic-video" style="text-align: center; display: flex; justify-content: center;">
+            <img src="./meme.png" alt="Meme Corner"
+              style="max-height: 60vh; max-width: 100%; width: auto; border-radius: 8px; display: block;">
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Flower garden growing along the bottom -->
+    <div class="flower-garden">
+      <!-- Lily -->
+      <svg class="flower lily" style="--growth-offset: 0.1;" viewBox="0 -40 100 200" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 160 Q55 110 50 60" stroke="rgba(255,255,255,0.7)" stroke-width="3" fill="none" />
+        <path d="M50 110 Q70 100 80 120 Q60 120 50 110" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.5)"
+          stroke-width="1.5" />
+        <path d="M50 130 Q30 120 20 140 Q40 140 50 130" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.5)"
+          stroke-width="1.5" />
+        <!-- Petals -->
+        <path d="M50 60 Q65 20 90 30 Q70 50 50 60" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.8)"
+          stroke-width="1" />
+        <path d="M50 60 Q35 20 10 30 Q30 50 50 60" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.8)"
+          stroke-width="1" />
+        <path d="M50 60 Q75 70 90 90 Q65 80 50 60" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.8)"
+          stroke-width="1" />
+        <path d="M50 60 Q25 70 10 90 Q35 80 50 60" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.8)"
+          stroke-width="1" />
+        <path d="M50 60 Q40 10 50 0 Q60 10 50 60" fill="rgba(255,255,255,0.5)" stroke="rgba(255,255,255,0.9)"
+          stroke-width="1" />
+        <!-- Stamen -->
+        <path d="M50 60 L 45 35 M50 60 L 50 30 M50 60 L 55 35" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" />
+        <circle cx="45" cy="35" r="2" fill="rgba(255,200,100,0.8)" />
+        <circle cx="50" cy="30" r="2" fill="rgba(255,200,100,0.8)" />
+        <circle cx="55" cy="35" r="2" fill="rgba(255,200,100,0.8)" />
+      </svg>
+      <!-- Rose -->
+      <svg class="flower rose" style="--growth-offset: 0.25;" viewBox="0 -40 100 200"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 160 Q45 100 50 70" stroke="rgba(255,255,255,0.7)" stroke-width="3" fill="none" />
+        <path d="M49 130 Q35 125 35 120 Q40 120 48 125" fill="rgba(255,255,255,0.7)" />
+        <path d="M51 100 Q65 95 65 90 Q60 90 51 95" fill="rgba(255,255,255,0.7)" />
+        <path d="M49 115 Q25 105 15 115 Q30 130 49 120" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.7)"
+          stroke-width="1.5" />
+        <path d="M51 85 Q75 75 85 85 Q70 100 51 90" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.7)"
+          stroke-width="1.5" />
+
+        <path d="M50 70 C 20 60, 20 20, 50 15 C 80 20, 80 60, 50 70" fill="rgba(255,255,255,0.2)"
+          stroke="rgba(255,255,255,0.8)" stroke-width="1" />
+        <path d="M30 45 C 10 30, 25 5, 50 10 C 35 25, 40 40, 30 45" fill="rgba(255,255,255,0.3)"
+          stroke="rgba(255,255,255,0.8)" stroke-width="1" />
+        <path d="M70 45 C 90 30, 75 5, 50 10 C 65 25, 60 40, 70 45" fill="rgba(255,255,255,0.3)"
+          stroke="rgba(255,255,255,0.8)" stroke-width="1" />
+        <path d="M40 60 C 25 50, 30 25, 50 25 C 70 25, 75 50, 60 60 C 50 75, 40 60, 40 60" fill="rgba(255,255,255,0.4)"
+          stroke="rgba(255,255,255,0.9)" stroke-width="1" />
+        <path d="M45 50 C 35 40, 45 30, 50 35 C 55 30, 65 40, 55 50 C 50 60, 45 50, 45 50" fill="rgba(255,255,255,0.5)"
+          stroke="white" stroke-width="1" />
+        <path d="M47 42 C 50 38, 53 45, 50 48 C 48 45, 47 42, 47 42" fill="white" stroke="white" stroke-width="1" />
+      </svg>
+      <!-- Lily -->
+      <svg class="flower lily" style="--growth-offset: 0.4;" viewBox="0 -40 100 200" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 160 Q55 110 50 60" stroke="rgba(255,255,255,0.7)" stroke-width="3" fill="none" />
+        <path d="M50 110 Q70 100 80 120 Q60 120 50 110" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.5)"
+          stroke-width="1.5" />
+        <path d="M50 130 Q30 120 20 140 Q40 140 50 130" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.5)"
+          stroke-width="1.5" />
+        <!-- Petals -->
+        <path d="M50 60 Q65 20 90 30 Q70 50 50 60" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.8)"
+          stroke-width="1" />
+        <path d="M50 60 Q35 20 10 30 Q30 50 50 60" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.8)"
+          stroke-width="1" />
+        <path d="M50 60 Q75 70 90 90 Q65 80 50 60" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.8)"
+          stroke-width="1" />
+        <path d="M50 60 Q25 70 10 90 Q35 80 50 60" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.8)"
+          stroke-width="1" />
+        <path d="M50 60 Q40 10 50 0 Q60 10 50 60" fill="rgba(255,255,255,0.5)" stroke="rgba(255,255,255,0.9)"
+          stroke-width="1" />
+        <!-- Stamen -->
+        <path d="M50 60 L 45 35 M50 60 L 50 30 M50 60 L 55 35" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" />
+        <circle cx="45" cy="35" r="2" fill="rgba(255,200,100,0.8)" />
+        <circle cx="50" cy="30" r="2" fill="rgba(255,200,100,0.8)" />
+        <circle cx="55" cy="35" r="2" fill="rgba(255,200,100,0.8)" />
+      </svg>
+      <!-- Rose -->
+      <svg class="flower rose" style="--growth-offset: 0.6;" viewBox="0 -40 100 200"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 160 Q45 100 50 70" stroke="rgba(255,255,255,0.7)" stroke-width="3" fill="none" />
+        <path d="M49 130 Q35 125 35 120 Q40 120 48 125" fill="rgba(255,255,255,0.7)" />
+        <path d="M51 100 Q65 95 65 90 Q60 90 51 95" fill="rgba(255,255,255,0.7)" />
+        <path d="M49 115 Q25 105 15 115 Q30 130 49 120" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.7)"
+          stroke-width="1.5" />
+        <path d="M51 85 Q75 75 85 85 Q70 100 51 90" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.7)"
+          stroke-width="1.5" />
+
+        <path d="M50 70 C 20 60, 20 20, 50 15 C 80 20, 80 60, 50 70" fill="rgba(255,255,255,0.2)"
+          stroke="rgba(255,255,255,0.8)" stroke-width="1" />
+        <path d="M30 45 C 10 30, 25 5, 50 10 C 35 25, 40 40, 30 45" fill="rgba(255,255,255,0.3)"
+          stroke="rgba(255,255,255,0.8)" stroke-width="1" />
+        <path d="M70 45 C 90 30, 75 5, 50 10 C 65 25, 60 40, 70 45" fill="rgba(255,255,255,0.3)"
+          stroke="rgba(255,255,255,0.8)" stroke-width="1" />
+        <path d="M40 60 C 25 50, 30 25, 50 25 C 70 25, 75 50, 60 60 C 50 75, 40 60, 40 60" fill="rgba(255,255,255,0.4)"
+          stroke="rgba(255,255,255,0.9)" stroke-width="1" />
+        <path d="M45 50 C 35 40, 45 30, 50 35 C 55 30, 65 40, 55 50 C 50 60, 45 50, 45 50" fill="rgba(255,255,255,0.5)"
+          stroke="white" stroke-width="1" />
+        <path d="M47 42 C 50 38, 53 45, 50 48 C 48 45, 47 42, 47 42" fill="white" stroke="white" stroke-width="1" />
+      </svg>
+      <!-- Lily -->
+      <svg class="flower lily" style="--growth-offset: 0.8;" viewBox="0 -40 100 200" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 160 Q55 110 50 60" stroke="rgba(255,255,255,0.7)" stroke-width="3" fill="none" />
+        <path d="M50 110 Q70 100 80 120 Q60 120 50 110" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.5)"
+          stroke-width="1.5" />
+        <path d="M50 130 Q30 120 20 140 Q40 140 50 130" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.5)"
+          stroke-width="1.5" />
+        <!-- Petals -->
+        <path d="M50 60 Q65 20 90 30 Q70 50 50 60" fill="rgba(255,255,255,0.4)" stroke="rgba(255,255,255,0.9)"
+          stroke-width="1" />
+        <path d="M50 60 Q35 20 10 30 Q30 50 50 60" fill="rgba(255,255,255,0.4)" stroke="rgba(255,255,255,0.9)"
+          stroke-width="1" />
+        <path d="M50 60 Q75 70 90 90 Q65 80 50 60" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.9)"
+          stroke-width="1" />
+        <path d="M50 60 Q25 70 10 90 Q35 80 50 60" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.9)"
+          stroke-width="1" />
+        <path d="M50 60 Q40 10 50 0 Q60 10 50 60" fill="rgba(255,255,255,0.6)" stroke="#ffffff" stroke-width="1" />
+        <!-- Stamen -->
+        <path d="M50 60 L 45 35 M50 60 L 50 30 M50 60 L 55 35" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" />
+        <circle cx="45" cy="35" r="2" fill="rgba(255,200,100,0.9)" />
+        <circle cx="50" cy="30" r="2" fill="rgba(255,200,100,0.9)" />
+        <circle cx="55" cy="35" r="2" fill="rgba(255,200,100,0.9)" />
+      </svg>
+    </div>
+  </div>
+
+  <script src="./main.js" defer></script>
+</body>
+
+</html>
